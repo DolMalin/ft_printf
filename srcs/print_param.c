@@ -6,7 +6,7 @@
 /*   By: pdal-mol <dolmalinn@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/11 16:40:00 by pdal-mol          #+#    #+#             */
-/*   Updated: 2021/11/12 13:45:52 by pdal-mol         ###   ########.fr       */
+/*   Updated: 2021/11/12 16:41:02 by pdal-mol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,12 +22,10 @@ void	print_param(va_list params_info, int param_type)
 		ft_putaddress((void *)va_arg(params_info, void *));
 	if (param_type == 'd')
 		ft_putnbr_fd((int)va_arg(params_info, int), 1);
-/*	if (c == 'u')
-		return (va_arg(params_info, unsigned int));
-
+	if (param_type == 'u')
+		ft_putunbr_fd((unsigned int)va_arg(params_info, unsigned int), 1);
 	if (param_type == 'x' || param_type == 'X')
-		ft_putnbr_hex((void *)va_arg(params_info, void *), param_type);
-*/
+		ft_putnbr_hex_fd((void *)va_arg(params_info, void *), param_type, 1);
 	if (param_type == '%')
 		ft_putchar_fd('%', 1);
 }

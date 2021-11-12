@@ -5,14 +5,12 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: pdal-mol <dolmalinn@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/11 18:13:12 by pdal-mol          #+#    #+#             */
-/*   Updated: 2021/11/12 12:05:51 by pdal-mol         ###   ########.fr       */
+/*   Created: 2021/11/12 15:50:55 by pdal-mol          #+#    #+#             */
+/*   Updated: 2021/11/12 15:58:27 by pdal-mol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
-
-int	ft_nblen(unsigned long long nb)
+int	ft_nblen(unsigned long long nb, int base_len)
 {
 	int	i;
 	int	count;
@@ -22,12 +20,12 @@ int	ft_nblen(unsigned long long nb)
 	if (nb < 0)
 	{
 		count++;
-		nb *= (-1);
+		nb = -nb;
 	}
 	count++;
-	while (nb > 9)
+	while (nb > (unsigned long long)base_len)
 	{
-		nb /= 10;
+		nb /= (unsigned long long)base_len;
 		count++;
 	}
 	return (count + 1);

@@ -19,6 +19,7 @@ ft_llutoa_hex.c\
 ft_putaddress.c\
 ft_strreverse.c\
 print_param.c\
+ft_putnbr_hex_fd.c\
 ft_nblen.c
 
 SRCS_DIR = ./srcs/
@@ -26,18 +27,16 @@ SRCS = $(addprefix $(SRCS_DIR),$(FILES))
 OBJ = $(SRCS:.c=.o)
 
 FLAGS = -Wall -Wextra -Werror
-HEADERS = includes/ft_printf.h libft/includes/libft.h
-LIBFT = libft.a
 
 all: $(NAME)
 
-%.o: %.c	${INC}
-			gcc ${FLAGS} -c $< -o ${<:.c=.o} -I includes
+%.o: %.c	
+			gcc $(FLAGS) -c $< -o $(<:.c=.o) -I includes
 
-$(NAME):	${OBJ}
+$(NAME):	$(OBJ)
 			make -C ./libft
 			cp ./libft/libft.a $(NAME)
-			ar -rc ${NAME} ${OBJ}
+			ar -rc $(NAME) $(OBJ)
 
 clean:
 	make -C ./libft clean
