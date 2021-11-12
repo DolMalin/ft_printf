@@ -6,11 +6,11 @@
 /*   By: pdal-mol <dolmalinn@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/11 16:44:21 by pdal-mol          #+#    #+#             */
-/*   Updated: 2021/11/11 18:10:32 by pdal-mol         ###   ########.fr       */
+/*   Updated: 2021/11/12 12:05:56 by pdal-mol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libftprintf.h"
+#include "libftprintf.h"
 
 char	*ft_llutoa_hex(unsigned long long nb, char *base)
 {

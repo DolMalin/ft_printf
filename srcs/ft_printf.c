@@ -6,11 +6,11 @@
 /*   By: pdal-mol <dolmalinn@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/11 16:38:35 by pdal-mol          #+#    #+#             */
-/*   Updated: 2021/11/11 18:04:51 by pdal-mol         ###   ########.fr       */
+/*   Updated: 2021/11/12 13:45:09 by pdal-mol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libftprintf.h"
+#include "libftprintf.h"
 
 int	ft_printf(const char *format, ...)
 {
@@ -24,7 +24,7 @@ int	ft_printf(const char *format, ...)
 		if (format[i] == '%')
 			print_param(params_info, format[i++ + 1]);
 		else
-			ft_putchar(format[i]);
+			ft_putchar_fd(format[i], 1);
 		i++;
 	}
 	va_end(params_info);

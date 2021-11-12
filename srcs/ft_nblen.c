@@ -6,11 +6,11 @@
 /*   By: pdal-mol <dolmalinn@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/11 18:13:12 by pdal-mol          #+#    #+#             */
-/*   Updated: 2021/11/11 18:13:29 by pdal-mol         ###   ########.fr       */
+/*   Updated: 2021/11/12 12:05:51 by pdal-mol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libftprintf.h"
+#include "libftprintf.h"
 
 int	ft_nblen(unsigned long long nb)
 {
