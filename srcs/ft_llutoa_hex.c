@@ -6,7 +6,7 @@
 /*   By: pdal-mol <dolmalinn@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/11 16:44:21 by pdal-mol          #+#    #+#             */
-/*   Updated: 2021/11/12 15:57:34 by pdal-mol         ###   ########.fr       */
+/*   Updated: 2021/11/13 18:13:37 by pdal-mol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_llutoa_hex(unsigned long long nb, char *base)
 	size_t	i;
 
 	i = 0;
-	output = ft_calloc(sizeof(char), (ft_nblen(nb, 16) + 1));
+	output = ft_calloc(sizeof(char), (ft_nblen_hex(nb, 16) + 1));
 	if (!output)
 		return (0);
 	if (nb == 0)

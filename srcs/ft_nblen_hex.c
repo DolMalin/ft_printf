@@ -1,27 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printaddress.c                                  :+:      :+:    :+:   */
+/*   ft_nblen_hex.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pdal-mol <dolmalinn@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/11 16:41:46 by pdal-mol          #+#    #+#             */
-/*   Updated: 2021/11/13 18:15:06 by pdal-mol         ###   ########.fr       */
+/*   Created: 2021/11/13 17:43:50 by pdal-mol          #+#    #+#             */
+/*   Updated: 2021/11/13 17:44:21 by pdal-mol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-int	ft_printaddress(void *input)
+int	ft_nblen_hex(unsigned int nb, int base_len)
 {
-	char	*address;
-	int		len;
+	int	i;
+	int	count;
 
-	len = 0;
-	address = ft_llutoa_hex((unsigned long long int)input, "0123456789abcdef");
-	ft_putstr_fd("0x", 1);
-	ft_putstr_fd(address, 1);
-	len = ft_strlen(address) + 2;
-	free(address);
-	return (len);
+	i = 0;
+	count = 0;
+	if (nb < 0)
+	{
+		count++;
+		nb = -nb;
+	}
+	count++;
+	while (nb >= (unsigned int)base_len)
+	{
+		nb /= base_len;
+		count++;
+	}
+	return (count);
 }

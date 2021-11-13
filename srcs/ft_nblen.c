@@ -6,11 +6,13 @@
 /*   By: pdal-mol <dolmalinn@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/12 15:50:55 by pdal-mol          #+#    #+#             */
-/*   Updated: 2021/11/13 12:43:55 by pdal-mol         ###   ########.fr       */
+/*   Updated: 2021/11/13 17:42:43 by pdal-mol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_nblen(unsigned long long nb, int base_len)
+#include <stdio.h>
+
+int	ft_nblen(int nb, int base_len)
 {
 	int	i;
 	int	count;
@@ -23,10 +25,10 @@ int	ft_nblen(unsigned long long nb, int base_len)
 		nb = -nb;
 	}
 	count++;
-	while (nb > (unsigned long long)base_len)
+	while (nb >= base_len)
 	{
-		nb /= (unsigned long long)base_len;
+		nb /= base_len;
 		count++;
 	}
-	return (count + 1);
+	return (count);
 }

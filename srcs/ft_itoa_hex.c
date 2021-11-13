@@ -1,27 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printaddress.c                                  :+:      :+:    :+:   */
+/*   ft_itoa_hex.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pdal-mol <dolmalinn@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/11 16:41:46 by pdal-mol          #+#    #+#             */
-/*   Updated: 2021/11/13 18:15:06 by pdal-mol         ###   ########.fr       */
+/*   Created: 2021/11/13 18:13:14 by pdal-mol          #+#    #+#             */
+/*   Updated: 2021/11/13 18:13:20 by pdal-mol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-int	ft_printaddress(void *input)
+char	*ft_itoa_hex(unsigned int nb, char *base)
 {
-	char	*address;
-	int		len;
+	char	*output;
+	size_t	i;
 
-	len = 0;
-	address = ft_llutoa_hex((unsigned long long int)input, "0123456789abcdef");
-	ft_putstr_fd("0x", 1);
-	ft_putstr_fd(address, 1);
-	len = ft_strlen(address) + 2;
-	free(address);
-	return (len);
+	i = 0;
+	output = ft_calloc(sizeof(char), (ft_nblen_hex(nb, 16) + 1));
+	if (!output)
+		return (0);
+	if (nb == 0)
+		output[i] = base[nb % 16];
+	while (nb > 0)
+	{
+		output[i] = base[nb % 16];
+		nb = nb / 16;
+		i++;
+	}
+	return (ft_strreverse(output));
 }

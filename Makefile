@@ -16,6 +16,7 @@ NAME = libftprintf.a
 FILES = \
 ft_printf.c\
 ft_strlen_specifierless.c\
+ft_itoa_hex.c\
 ft_llutoa_hex.c\
 ft_printchar.c\
 ft_printstr.c\
@@ -25,7 +26,8 @@ ft_printunbr.c\
 ft_printnbr_hex.c\
 ft_strreverse.c\
 print_param.c\
-ft_nblen.c
+ft_nblen.c\
+ft_nblen_hex.c
 
 SRCS_DIR = ./srcs/
 SRCS = $(addprefix $(SRCS_DIR),$(FILES))
