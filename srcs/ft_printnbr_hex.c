@@ -1,34 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   ft_printnbr_hex.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pdal-mol <dolmalinn@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/11 16:38:35 by pdal-mol          #+#    #+#             */
-/*   Updated: 2021/11/13 13:58:15 by pdal-mol         ###   ########.fr       */
+/*   Created: 2021/11/13 13:39:48 by pdal-mol          #+#    #+#             */
+/*   Updated: 2021/11/13 13:43:58 by pdal-mol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-int	ft_printf(const char *format, ...)
+int	ft_printnbr_hex(void *input, char specifier)
 {
-	va_list	params_info;
-	size_t	i;
-	size_t	len;
+	char	*nbr;
+	int		len;
 
-	i = 0;
-	len = 0;
-	va_start(params_info, format);
-	while (format[i])
-	{
-		if (format[i] == '%' && format[i + 1])
-			len += print_param(params_info, format[i++ + 1]);
-		else
-			len += ft_printchar(format[i]);
-		i++;
-	}
-	va_end(params_info);
-	return (ft_strlen_specifierless(format) + len);
+	nbr = NULL;
+	if (specifier == 'x')
+		nbr = ft_llutoa_hex((unsigned long long)input, "0123456789abcdef");
+	else if (specifier == 'X')
+		nbr = ft_llutoa_hex((unsigned long long)input, "0123456789ABCDEF");
+	ft_putstr_fd(nbr, 1);
+	len = ft_nblen((unsigned long long )input, 16);
+	free(nbr);
+	return (len);
 }

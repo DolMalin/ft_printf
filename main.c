@@ -12,8 +12,13 @@ int main()
 	int	hex_nb = 0x2a;
 	int	hexcap_nb = 0x2A;
 	unsigned int u_nb = 4294967295;
-	printf("coucou %s j'ai %d ans, je suis a %p prout, 42 en hexa c'est %x ou %X, %u\n", str, nb, &nb, 42, 42, u_nb);
-	ft_printf("coucou %s j'ai %d ans, je suis a %p prout, 42 en hexa c'est %x ou %X, %u\n", str, nb, &nb, 42, 42, u_nb);
+	int	res1;
+	int	res2;
 
+
+	res1 = printf("coucou %s j'ai %d ans, je suis a %p prout, 42 en hexa c'est %x ou %X, %u eeeeee %c\n", str, nb, &nb, 42, 42, u_nb, c);
+	res2 = ft_printf("coucou %s j'ai %d ans, je suis a %p prout, 42 en hexa c'est %x ou %X, %u eeeeee %c\n", str, nb, &nb, 42, 42, u_nb, c);
+
+	printf("\n\n res 1 = %d | res 2 = %d\n", res1, res2);
 	return (0);		
 }

@@ -1,26 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_hex_fd.c                                 :+:      :+:    :+:   */
+/*   ft_printnbr.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pdal-mol <dolmalinn@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/12 15:41:51 by pdal-mol          #+#    #+#             */
-/*   Updated: 2021/11/12 16:45:54 by pdal-mol         ###   ########.fr       */
+/*   Created: 2021/11/13 13:27:42 by pdal-mol          #+#    #+#             */
+/*   Updated: 2021/11/13 13:30:41 by pdal-mol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-void	ft_putnbr_hex_fd(void *input, char specifier, int fd)
+int	ft_printnbr(int nb)
 {
-	char	*nbr;
-
-	nbr = NULL;
-	if (specifier == 'x')
-		nbr = ft_llutoa_hex((unsigned long long)input, "0123456789abcdef");
-	else if (specifier == 'X')
-		nbr = ft_llutoa_hex((unsigned long long)input, "0123456789ABCDEF");
-	ft_putstr_fd(nbr, fd);
-	free(nbr);
+	ft_putnbr_fd(nb, 1);
+	return (ft_nblen(nb, 10));
 }

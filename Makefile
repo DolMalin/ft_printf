@@ -15,11 +15,16 @@ NAME = libftprintf.a
 
 FILES = \
 ft_printf.c\
+ft_strlen_specifierless.c\
 ft_llutoa_hex.c\
-ft_putaddress.c\
+ft_printchar.c\
+ft_printstr.c\
+ft_printaddress.c\
+ft_printnbr.c\
+ft_printunbr.c\
+ft_printnbr_hex.c\
 ft_strreverse.c\
 print_param.c\
-ft_putnbr_hex_fd.c\
 ft_nblen.c
 
 SRCS_DIR = ./srcs/
