@@ -6,12 +6,11 @@
 /*   By: pdal-mol <dolmalinn@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/11 16:38:35 by pdal-mol          #+#    #+#             */
-/*   Updated: 2021/11/16 12:12:26 by pdal-mol         ###   ########.fr       */
+/*   Updated: 2021/11/16 12:23:35 by pdal-mol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include <stdio.h>
 
 int	ft_printf(const char *format, ...)
 {
