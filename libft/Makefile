@@ -6,7 +6,7 @@
 #    By: pdal-mol <dolmalinn@gmail.com>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/02 12:00:25 by pdal-mol          #+#    #+#              #
-#    Updated: 2021/11/10 14:27:22 by pdal-mol         ###   ########lyon.fr    #
+#    Updated: 2021/11/16 10:08:53 by pdal-mol         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -46,7 +46,8 @@ ft_striteri.c\
 ft_putchar_fd.c\
 ft_putstr_fd.c\
 ft_putendl_fd.c\
-ft_putnbr_fd.c
+ft_putnbr_fd.c\
+ft_putunbr_fd.c
 
 BONUS = \
 ft_lstnew.c\

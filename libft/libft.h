@@ -6,7 +6,7 @@
 /*   By: pdal-mol <dolmalinn@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 11:58:58 by pdal-mol          #+#    #+#             */
-/*   Updated: 2021/11/10 14:26:06 by pdal-mol         ###   ########lyon.fr   */
+/*   Updated: 2021/11/16 10:09:25 by pdal-mol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,6 +73,7 @@ void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char const *str, int fd);
 void	ft_putendl_fd(char const *str, int fd);
 void	ft_putnbr_fd(int nb, int fd);
+void	ft_putunbr_fd(unsigned int nb, int fd);
 
 /* =============== PART 3 - BONUS =============== */
 t_list	*ft_lstnew(void *content);
