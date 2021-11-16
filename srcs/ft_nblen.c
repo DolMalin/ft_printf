@@ -6,11 +6,9 @@
 /*   By: pdal-mol <dolmalinn@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/12 15:50:55 by pdal-mol          #+#    #+#             */
-/*   Updated: 2021/11/16 11:00:21 by pdal-mol         ###   ########.fr       */
+/*   Updated: 2021/11/16 11:33:37 by pdal-mol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <stdio.h>
 
 int	ft_nblen(int nb, int base_len)
 {

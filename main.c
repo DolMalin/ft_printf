@@ -1,4 +1,4 @@
-#include "libftprintf.h"
+#include "ft_printf.h"
 #include <stdio.h>
 
 // itoa_hex ne gere pas les nbr negatifs ???

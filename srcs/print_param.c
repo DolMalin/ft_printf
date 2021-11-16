@@ -6,11 +6,11 @@
 /*   By: pdal-mol <dolmalinn@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/13 12:44:05 by pdal-mol          #+#    #+#             */
-/*   Updated: 2021/11/13 13:45:13 by pdal-mol         ###   ########.fr       */
+/*   Updated: 2021/11/16 11:34:45 by pdal-mol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 int		print_param(va_list params_info, int param_type)
 {

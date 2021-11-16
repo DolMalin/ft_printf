@@ -6,11 +6,11 @@
 /*   By: pdal-mol <dolmalinn@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/11 16:50:07 by pdal-mol          #+#    #+#             */
-/*   Updated: 2021/11/12 12:05:39 by pdal-mol         ###   ########.fr       */
+/*   Updated: 2021/11/16 11:34:38 by pdal-mol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 char	*ft_strreverse(char *str)
 {

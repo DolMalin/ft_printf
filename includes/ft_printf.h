@@ -1,17 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libftprintf.h                                      :+:      :+:    :+:   */
+/*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pdal-mol <dolmalinn@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/11 16:35:48 by pdal-mol          #+#    #+#             */
-/*   Updated: 2021/11/13 18:14:13 by pdal-mol         ###   ########.fr       */
+/*   Created: 2021/11/16 11:33:13 by pdal-mol          #+#    #+#             */
+/*   Updated: 2021/11/16 11:33:14 by pdal-mol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFTPRINTF_H
-# define LIBFTPRINTF_H
+
+#ifndef FT_PRINTF_H
+# define FT_PRINTF_H
 
 /* =============== INCLUDES ================ */
 #include <stdlib.h>
@@ -30,7 +31,7 @@ int		ft_printunbr(unsigned int nb);
 int		ft_printnbr_hex(void *input, char specifier);
 int		ft_nblen(int nb, int base_len);
 int		ft_nblen_hex(unsigned int nb, int base_len);
-char	*ft_llutoa_hex(unsigned long long nb, char *base);
+char	*ft_llutoa_hex(unsigned long nb, char *base);
 char	*ft_itoa_hex(unsigned int nb, char *base);
 char	*ft_strreverse(char *str);
 int		ft_printaddress(void *input);
