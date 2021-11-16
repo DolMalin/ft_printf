@@ -6,7 +6,7 @@
 /*   By: pdal-mol <dolmalinn@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/12 15:50:55 by pdal-mol          #+#    #+#             */
-/*   Updated: 2021/11/13 17:42:43 by pdal-mol         ###   ########.fr       */
+/*   Updated: 2021/11/16 11:00:21 by pdal-mol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,22 @@
 
 int	ft_nblen(int nb, int base_len)
 {
-	int	i;
-	int	count;
+	int			i;
+	int			count;
+	long int	nbr;
 
 	i = 0;
 	count = 0;
-	if (nb < 0)
+	nbr = nb;
+	if (nbr < 0)
 	{
 		count++;
-		nb = -nb;
+		nbr = -nbr;
 	}
 	count++;
-	while (nb >= base_len)
+	while (nbr >= base_len)
 	{
-		nb /= base_len;
+		nbr /= base_len;
 		count++;
 	}
 	return (count);
