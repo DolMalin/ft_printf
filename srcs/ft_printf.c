@@ -6,7 +6,7 @@
 /*   By: pdal-mol <dolmalinn@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/11 16:38:35 by pdal-mol          #+#    #+#             */
-/*   Updated: 2021/11/16 11:34:00 by pdal-mol         ###   ########.fr       */
+/*   Updated: 2021/11/16 12:12:26 by pdal-mol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int	ft_printf(const char *format, ...)
 	{
 		if (format[i] == '%' && format[i + 1])
 			len += print_param(params_info, format[i++ + 1]);
-		else
+		else if (format[i] != '%')
 			len	+= ft_printchar(format[i]);
 		i++;
 	}

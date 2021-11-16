@@ -23,8 +23,9 @@ int main()
 //	res2 = printf("%u", u_nb);
 	printf("\n\n res 1 = %d | res 2 = %d\n", res1, res2);
 
-res1 = ft_printf("%d %d\n", 2147483647, (int)-2147483648);
-res2 = printf("%d %d\n", 2147483647, (int)-2147483648);
+
+res1 = ft_printf("%");
+//res2 = printf("%");
 
 
 	printf("\n\n res 1 = %d | res 2 = %d\n", res1, res2);
