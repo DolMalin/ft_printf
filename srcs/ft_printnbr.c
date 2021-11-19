@@ -6,11 +6,11 @@
 /*   By: pdal-mol <dolmalinn@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/13 13:27:42 by pdal-mol          #+#    #+#             */
-/*   Updated: 2021/11/16 11:34:11 by pdal-mol         ###   ########.fr       */
+/*   Updated: 2021/11/19 15:10:17 by pdal-mol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../includes/ft_printf.h"
 
 int	ft_printnbr(int nb)
 {

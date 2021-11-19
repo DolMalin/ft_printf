@@ -6,7 +6,7 @@
 #    By: pdal-mol <dolmalinn@gmail.com>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/02 12:00:25 by pdal-mol          #+#    #+#              #
-#    Updated: 2021/11/16 10:08:53 by pdal-mol         ###   ########.fr        #
+#    Updated: 2021/11/19 14:51:06 by pdal-mol         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -71,7 +71,7 @@ FLAGS = -Wall -Wextra -Werror
 
 all: $(NAME)
 
-.c.o:
+%.o: %.c $(HEADER)
 	gcc $(FLAGS) -c $< -o ${<:.c=.o}
 
 $(NAME): ${OBJ}
