@@ -12,7 +12,6 @@
 
 NAME = libftprintf.a
 
-
 FILES = \
 ft_printf.c\
 ft_strlen_specifierless.c\
