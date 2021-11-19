@@ -27,7 +27,8 @@ ft_printnbr_hex.c\
 ft_strreverse.c\
 print_param.c\
 ft_nblen.c\
-ft_nblen_hex.c
+ft_nblen_hex.c\
+ft_nblen_hexull.c
 
 SRCS_DIR = ./srcs/
 SRCS = $(addprefix $(SRCS_DIR),$(FILES))

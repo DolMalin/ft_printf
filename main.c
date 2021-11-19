@@ -15,18 +15,17 @@ int main()
 	int	res1;
 	int	res2;
 
-	res1 = printf("coucou %s j'ai %d ans, je suis a %p prout, 42 en hexa c'est %x ou %X, %u eeeeee %c\n", str, nb, &nb, 42, 42, u_nb, c);
-	res2 = ft_printf("coucou %s j'ai %d ans, je suis a %p prout, 42 en hexa c'est %x ou %X, %u eeeeee %c\n", str, nb, &nb, 42, 42, u_nb, c);
+//	res1 = printf("coucou %s j'ai %d ans, je suis a %p prout, 42 en hexa c'est %x ou %X, %u eeeeee %c\n", str, nb, &nb, 42, 42, u_nb, c);
+	//res2 = ft_printf("coucou %s j'ai %d ans, je suis a %p prout, 42 en hexa c'est %x ou %X, %u eeeeee %c\n", str, nb, &nb, 42, 42, u_nb, c);
 
 //	res1 = ft_printf("%u", u_nb);
 //	printf("\n");
 //	res2 = printf("%u", u_nb);
-	printf("\n\n res 1 = %d | res 2 = %d\n", res1, res2);
+	//printf("\n\n res 1 = %d | res 2 = %d\n", res1, res2);
 
 
-res1 = ft_printf("%");
-//res2 = printf("%");
-
+	res1 = printf("%p\n", (void *)-9223372036854775808);
+	res2 = ft_printf("%p\n", (void *)-9223372036854775808);
 
 	printf("\n\n res 1 = %d | res 2 = %d\n", res1, res2);
 	return (0);		

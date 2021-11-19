@@ -1,33 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_llutoa_hex.c                                    :+:      :+:    :+:   */
+/*   ft_nblen_hexull.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pdal-mol <dolmalinn@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/11 16:44:21 by pdal-mol          #+#    #+#             */
-/*   Updated: 2021/11/19 14:41:12 by pdal-mol         ###   ########.fr       */
+/*   Created: 2021/11/19 14:05:53 by pdal-mol          #+#    #+#             */
+/*   Updated: 2021/11/19 14:42:25 by pdal-mol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
-
-char	*ft_llutoa_hex(unsigned long nb, char *base)
+int	ft_nblen_hexull(unsigned long nb, int base_len)
 {
-	char				*output;
-	size_t				i;
-		
+	int	i;
+	int	count;
+
 	i = 0;
-	output = ft_calloc(sizeof(char), (ft_nblen_hexull(nb, 16) + 1));
-	if (!output)
-		return (0);
-	if (nb == 0)
-		output[i] = base[nb % 16];
-	while (nb > 0)
+	count = 0;
+	if (nb < 0)
 	{
-		output[i] = base[nb % 16];
-		nb = nb / 16;
-		i++;
+		count++;
+		nb = -nb;
 	}
-	return (ft_strreverse(output));
+	count++;
+	while (nb >= (unsigned long)base_len)
+	{
+		nb /= base_len;
+		count++;
+	}
+	return (count);
 }
